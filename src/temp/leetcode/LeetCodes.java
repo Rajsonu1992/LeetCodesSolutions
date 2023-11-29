@@ -1384,5 +1384,61 @@ public class LeetCodes {
                 .stream()
                 .collect(Collectors.toList());
     }
+
+    public static int[] bubbleSortInAsscending(int[] arr) {
+        for (int i = 0 ; i < arr.length; i++) {
+            for (int j = 0 ; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+
+    public static int[] bubbleSortInDesending(int[] arr) {
+        for (int i = 0 ; i < arr.length; i++) {
+            for (int j = 0 ; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+
+    public static int[] selectionSortInAsscending(int[] arr) {
+        for (int i = 0 ; i < arr.length-1; i++) {
+            int select = i;
+            for (int j = i+1 ; j < arr.length; j++) {
+                if (arr[select] > arr[j]) {
+                    select = j;
+                }
+            }
+            int temp = arr[i];
+            arr[i] = arr[select];
+            arr[select] = temp;
+        }
+        return arr;
+    }
+
+    public static int[] selectionSortInDescending(int[] arr) {
+        for (int i = 0 ; i < arr.length-1; i++) {
+            int select = i;
+            for (int j = i+1 ; j < arr.length; j++) {
+                if (arr[select] < arr[j]) {
+                    select = j;
+                }
+            }
+            int temp = arr[i];
+            arr[i] = arr[select];
+            arr[select] = temp;
+        }
+        return arr;
+    }
 }
 

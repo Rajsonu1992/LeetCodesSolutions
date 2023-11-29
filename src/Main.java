@@ -10,6 +10,8 @@
 
 import temp.leetcode.LeetCodes;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         String out = "";
@@ -40,7 +42,7 @@ public class Main {
 //        System.out.println(leetCodes.noOfRepeatWords("popokpo", "po"));
 //        System.out.println(leetCodes.topKFrequent(new String[]{"i","love","temp.leetcode","i","love","coding"}, 2));
 //        System.out.println(leetCodes.findAnagrams("cbabaebacd", "abc"));
-        System.out.println(leetCodes.findConsNumbersOf1("110010111111111111101111100111111"));
+//        System.out.println(leetCodes.findConsNumbersOf1("110010111111111111101111100111111"));
 //        String input = "abcdf";
 //        List<String> permutations = leetCodes.permutations(input);
 //
@@ -48,6 +50,8 @@ public class Main {
 //        for (String permutation : permutations) {
 //            System.out.println(permutation);
 //        }
+
+        System.out.println(Arrays.toString(LeetCodes.selectionSortInAccending(new int[] {7,8,2,3,4,5,1,6})));
     }
 }
 
